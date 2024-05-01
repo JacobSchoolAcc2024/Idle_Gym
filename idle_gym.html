@@ -4,9 +4,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <div class="nav">
         <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="market.html">Market</a></li>
-            <li><a href="creators.html">Creators</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="support.html">Support</a></li>
         </ul>
@@ -17,21 +14,31 @@
   <script src="gym.js"></script>
   <title>Idle Gym</title>
   <noscript>
-    Sorry...JavaScript is needed to go ahead.
+    Sorry...JavaScript is needed to go ahsead.
   </noscript>
 </head>
 <body>
-  <button id=""></button>
-  <button onclick="updateStr()" id="pushups">
-    Push ups
-  </button>
+
+  <div class="workouts">
+    <button onclick="updateStr()" id="pushups">
+      Push up
+    </button>
+    <button onclick="sit_up()"  id="wide_pushups"  style="display: none;">
+      Wide Pushups
+    </button>
+  </div>
+  <div class="weights">
+    <button onclick="weight()"   id="weight1" style="display: none;">
+      Weight X1
+    </button>
+  </div>
   <div class="container">
-    <div id="strength">Strength: 0</div>
+    <div id="str">Strength: 0</div>
     <div id="energy">Energy: 5</div>
     <div id="injury">Injury: 0</div>
   </div>
-  <div>
-    
+  <div class="inventory">
+    <div id="weights_owned">Weights owned: 0</div>
   </div>
 </body>
 </html>

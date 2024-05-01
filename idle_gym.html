@@ -21,9 +21,19 @@
   </noscript>
 </head>
 <body>
-  <button onclick="updateStr()" id="pushups">
-    Push up
-  </button>
+  <div class="workouts">
+    <button onclick="updateStr()" id="pushups">
+      Push up
+    </button>
+    <button>
+      Wide Pushups
+    </button>
+  </div>
+  <div class="weights">
+    <button onclick="weight()"   id="weight1" style="display: none;">
+      Weight X1
+    </button>
+  </div>
   <div class="container">
     <div id="str">Strength: 0</div>
     <div id="energy">Energy: 5</div>

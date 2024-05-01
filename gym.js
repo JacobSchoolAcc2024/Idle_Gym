@@ -2,7 +2,18 @@ let str = 0;
 let strGain = 1
 let energy = 5;
 let injury = 0;
+let weights = 0;
 let energyRecoveryInterval = 2000;
+
+
+
+function sit_up(){
+
+
+}
+
+
+
 
 function checkStr(){
     if (str >= 10) {
@@ -39,7 +50,7 @@ function updateStr() {
 
 
 
-function gainStr(){
+function weight(){
     if(str>= 10){
       str -= 10; 
       strGain += 0.5;

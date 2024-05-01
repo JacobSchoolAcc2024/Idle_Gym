@@ -4,7 +4,7 @@
     <div class="nav">
         <ul>
             <li><a href="idle_gym.html">Home</a></li>
-            <li><a href="market.html">Market</a></li>
+            <li><a href="market.html" >Market</a></li>
             <li><a href="creators.html">Creators</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="support.html">Support</a></li>
@@ -21,7 +21,16 @@
   </head>
   <body>
     <div>
-        
+      <script>
+      var str = localStorage.getItem("str_copy");
+      </script>
+      <img src="enemy.png" alt="enemy" id="enemy_img">
+      <div id="enemy_HP">enemy HP: 100</div>
+      <div id="player_HP">player HP: 100</div>
+      <div id="player_str">player str</div>
+      <button onclick="fightEnemy()" id="fight">
+        Fight
+      </button>
     </div>
     
 </body>

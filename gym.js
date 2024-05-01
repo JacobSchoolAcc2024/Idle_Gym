@@ -3,7 +3,10 @@ let strGain = 1
 let energy = 5;
 let injury = 0;
 let weights = 0;
+let enemy_hp = 100;
+let player_hp = 100;
 let energyRecoveryInterval = 2000;
+let enemy_str = 2;
 
 
 
@@ -115,3 +118,12 @@ function injuryRecovery() {
 // Set intervals for energy and injury recovery
 setInterval(regainEnergy, energyRecoveryInterval);
 setInterval(injuryRecovery, 10000);
+
+// Function for fighting enemy  
+function fightEnemy(){
+    enemy_hp -= str;
+    player_hp -= enemy_str;
+    document.getElementById("player_str").innerText = "player strength: " + str;
+    document.getElementById("enemy_HP").innerText = "enemy HP: " + enemy_hp;
+    document.getElementById("player_HP").innerText = "player HP: " + player_hp;
+}

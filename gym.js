@@ -7,6 +7,7 @@ let enemy_hp = 100;
 let player_hp = 100;
 let energyRecoveryInterval = 2000;
 let enemy_str = 2;
+let enemy_level = 1;
 
 
 
@@ -123,7 +124,18 @@ setInterval(injuryRecovery, 10000);
 function fightEnemy(){
     enemy_hp -= str;
     player_hp -= enemy_str;
+    if (player_hp <= 0){
+        player_hp=0;
+        str=0;
+    }
+    if(enemy_hp <= 0){
+        enemy_level += 1;
+        enemy_hp = 100;
+        enemy_str +=2;
+    } 
     document.getElementById("player_str").innerText = "player strength: " + str;
     document.getElementById("enemy_HP").innerText = "enemy HP: " + enemy_hp;
     document.getElementById("player_HP").innerText = "player HP: " + player_hp;
+    document.getElementById("enemy_level").innerText = "enemy level: " + enemy_level;
+    
 }
